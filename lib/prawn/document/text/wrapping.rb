@@ -49,8 +49,9 @@ module Prawn
               end
             end    
           end
-
-          output
+          
+          # Remove any preceding newlines which are sometimes added before a long word wraps
+          output.sub(/\n?(.*)/, "\\1")
         end
         
         def naive_unwrap(string)
