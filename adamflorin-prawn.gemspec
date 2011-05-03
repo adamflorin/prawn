@@ -2,8 +2,8 @@
 #  adamflorin-prawn.gemspec: move .gemspec out of Rakefile
 #  so that we can include this git fork using bundler
 #  
-#  Copyright May 2011, Adam Florin. All rights reserved.
-# 
+
+PRAWN_VERSION = "0.6.3" 
 
 Gem::Specification.new do |spec|
   spec.name = "prawn-core"
