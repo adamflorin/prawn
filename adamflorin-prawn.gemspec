@@ -1,0 +1,29 @@
+# 
+#  adamflorin-prawn.gemspec: move .gemspec out of Rakefile
+#  so that we can include this git fork using bundler
+#  
+#  Copyright May 2011, Adam Florin. All rights reserved.
+# 
+
+Gem::Specification.new do |spec|
+  spec.name = "prawn-core"
+  spec.version = PRAWN_VERSION
+  spec.platform = Gem::Platform::RUBY
+  spec.summary = "A fast and nimble PDF generator for Ruby"
+  spec.files =  Dir.glob("{examples,lib,spec,vendor,data}/**/**/*") +
+                      ["Rakefile"]
+  spec.require_path = "lib"
+
+  spec.test_files = Dir[ "test/*_test.rb" ]
+  spec.has_rdoc = true
+  spec.extra_rdoc_files = %w{HACKING README LICENSE COPYING}
+  spec.rdoc_options << '--title' << 'Prawn Documentation' <<
+                       '--main'  << 'README' << '-q'
+  spec.author = "Gregory Brown"
+  spec.email = "  gregory.t.brown@gmail.com"
+  spec.rubyforge_project = "prawn"
+  spec.homepage = "http://prawn.majesticseacreature.com"
+  spec.description = <<END_DESC
+  Prawn is a fast, tiny, and nimble PDF generator for Ruby
+END_DESC
+end
