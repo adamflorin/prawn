@@ -6,7 +6,7 @@
 PRAWN_VERSION = "0.6.3" 
 
 Gem::Specification.new do |spec|
-  spec.name = "prawn-core"
+  spec.name = "adamflorin-prawn-core"
   spec.version = PRAWN_VERSION
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A fast and nimble PDF generator for Ruby"
